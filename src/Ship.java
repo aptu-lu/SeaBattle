@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 public class Ship {
-    static int shotX;
-    static int shotY;
+    int shotX;
+    int shotY;
     static int numberOfShips;
 
-    static void createShips() {
+    void createShips() {
         int count = 0;
         System.out.println("Skol'ko palub vi hotite sozdat'?");
         numberOfShips = Integer.parseInt(new Scanner(System.in).nextLine());

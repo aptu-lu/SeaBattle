@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Player {
-    static int hitX;
-    static int hitY;
-    private static boolean isRetry;
+    int hitX;
+    int hitY;
 
 
-    static void playerHit() {
-            do {
+    void playerHit() {
+        boolean isRetry;
+        do {
                 isRetry = false;
                 do {
                     Field.showField();
