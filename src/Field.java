@@ -19,7 +19,7 @@ public class Field {
         }
     }
 
-    static boolean gameOver() {
+    static void gameOver() {
         M:
         for (int i = 0; i < cells.length; i++) {
             for (int j = 0; j < cells.length; j++) {
@@ -31,6 +31,5 @@ public class Field {
                 }
             }
         }
-        return gameIsOver;
     }
 }

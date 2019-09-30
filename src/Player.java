@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Player {
-    int hitX;
-    int hitY;
+    private int hitX;
+    private int hitY;
 
 
     void playerHit() {

@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Ship {
-    int shotX;
-    int shotY;
+    private int shotX;
+    private int shotY;
     static int numberOfShips;
 
     void createShips() {
@@ -21,7 +21,7 @@ public class Ship {
                 System.out.println("Vvedite coordinatu Y dlya korablya: ");
                 shotY = Integer.parseInt(new Scanner(System.in).nextLine());
             } while (shotY < 0 | shotY > Field.cells.length);
-            if(Field.cells[shotX][shotY]=='.'){
+            if (Field.cells[shotX][shotY] == '.') {
                 Field.cells[shotX][shotY] = 'O';
                 count++;
             } else {
