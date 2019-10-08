@@ -12,13 +12,23 @@ public class Player {
                 do {
                     Field.showField();
                     System.out.println("Kuda strelyaem po X: ");
-                    hitX = Integer.parseInt(new Scanner(System.in).nextLine());
+                    try {
+                        hitX = Integer.parseInt(new Scanner(System.in).nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.println("vvedite 4islo!");
+                        hitX = -1;
+                    }
                 } while (hitX < 0 | hitX > Field.cells.length);
 
                 do {
                     Field.showField();
                     System.out.println("Kuda strelyaem po Y: ");
-                    hitY = Integer.parseInt(new Scanner(System.in).nextLine());
+                    try {
+                        hitY = Integer.parseInt(new Scanner(System.in).nextLine());
+                    } catch (NumberFormatException e) {
+                        System.out.println("vvedite 4islo!");
+                        hitY = -1;
+                    }
                 } while (hitY < 0 | hitY > Field.cells.length);
                 
                 switch (Field.cells[hitX][hitY]){

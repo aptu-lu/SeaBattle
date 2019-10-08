@@ -13,13 +13,23 @@ public class Ship {
             do {
                 Field.showField();
                 System.out.println("Vvedite coordinatu X dlya korablya: ");
-                shotX = Integer.parseInt(new Scanner(System.in).nextLine());
+                try {
+                    shotX = Integer.parseInt(new Scanner(System.in).nextLine());
+                } catch (NumberFormatException e) {
+                    System.out.println("vvedite 4islo!");
+                    shotX = -1;
+                }
             } while (shotX < 0 | shotX > Field.cells.length);
 
             do {
                 Field.showField();
                 System.out.println("Vvedite coordinatu Y dlya korablya: ");
-                shotY = Integer.parseInt(new Scanner(System.in).nextLine());
+                try {
+                    shotY = Integer.parseInt(new Scanner(System.in).nextLine());
+                } catch (NumberFormatException e) {
+                    System.out.println("vvedite 4islo!");
+                    shotY = -1;
+                }
             } while (shotY < 0 | shotY > Field.cells.length);
             if (Field.cells[shotX][shotY] == '.') {
                 Field.cells[shotX][shotY] = 'O';
